@@ -10,7 +10,7 @@ data = {
 }
 
 df = pd.DataFrame(data)
-df.to_excel('students.xlsx', index=False, sheet_name='Sheet1')
+df.to_excel('students.xlsx', sheet_name='Sheet1')
 
 # 1
 df = pd.read_excel('students.xlsx', sheet_name='Sheet1')
@@ -24,7 +24,7 @@ print("Average Score:", average_score)
 
 # 4
 plt.figure(figsize=(8, 5))
-sns.histplot(df['Score'], bins=5, kde=True)
+sns.histplot(df['Score'], kde=True)
 plt.title('Score Distribution')
 plt.show()
 
